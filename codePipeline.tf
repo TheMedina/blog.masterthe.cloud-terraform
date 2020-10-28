@@ -41,7 +41,7 @@ resource "aws_codepipeline" "codepipeline" {
       version          = "1"
 
       configuration = {
-        ProjectName = "master-the-cloud-codebuild"
+        ProjectName = "mtcCodeBuild"
       }
     }
   }
