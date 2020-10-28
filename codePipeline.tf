@@ -1,5 +1,5 @@
 resource "aws_codepipeline" "codepipeline" {
-  name     = "tf-test-pipeline"
+  name     = "blog.masterthe.cloud"
   role_arn = aws_iam_role.codepipeline_role.arn
 
   artifact_store {
@@ -41,7 +41,7 @@ resource "aws_codepipeline" "codepipeline" {
       version          = "1"
 
       configuration = {
-        ProjectName = "blog.masterthe.cloud-infrastructure"
+        ProjectName = "master-the-cloud-codebuild"
       }
     }
   }
