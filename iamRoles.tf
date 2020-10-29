@@ -1,6 +1,6 @@
 #IAM Roles for AWS CodeBuild and CodePipeline
-resource "aws_iam_role" "example" {
-  name = "example"
+resource "aws_iam_role" "test_codebuild" {
+  name = "test_codebuild"
 
   assume_role_policy = <<EOF
 {
