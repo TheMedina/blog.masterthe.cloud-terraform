@@ -1,3 +1,4 @@
+#CodePipeline and corresponding stage definitions 
 resource "aws_codepipeline" "codepipeline" {
   name     = "blog.masterthe.cloud"
   role_arn = aws_iam_role.codepipeline_role.arn
@@ -9,7 +10,7 @@ resource "aws_codepipeline" "codepipeline" {
   }
 
   stage {
-    name = "Source"
+    name = "Source/GitHub"
 
     action {
       name             = "Source"
@@ -29,7 +30,7 @@ resource "aws_codepipeline" "codepipeline" {
   }
 
   stage {
-    name = "Build"
+    name = "Build/Jekyll"
 
     action {
       name             = "Build"
@@ -47,7 +48,7 @@ resource "aws_codepipeline" "codepipeline" {
   }
 
   stage {
-    name = "Deploy"
+    name = "Deploy/S3"
 
     action {
       name            = "Deploy"
