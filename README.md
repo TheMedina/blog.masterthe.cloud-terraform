@@ -8,9 +8,9 @@ The goals of this project are as follows:
 - Facilate an automatic AWS CodeBuild project when a commit is detected into a designated branch
 
 ## Architecture Diagram
-[Insert Diagram Here] Coming Soon
-
 ![AWS Pipeline](pipeline.png)
+
+I would recommend downloading the architecture diagram as it's a large file. It may be hard to read the text without looking at it closer to it's native size.
 
 ## Deployed Resources
 
