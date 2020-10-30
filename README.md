@@ -1,5 +1,5 @@
 # AWS CodePipline / CodeBuild Implementation
-The code in this repositiory should allow you to seamlessly integrate an AWS CodePipline workflow with an AWS CodeBuild project. 
+The code in this repositiory should allow you to seamlessly integrate a simple AWS CodePipline workflow with an AWS CodeBuild project. 
 
 The goals of this project are as follows:
 - Deploy the neccessary infrastrcutre to create an AWS CI/CD pipeline
@@ -23,6 +23,7 @@ This Terraform project will deploy the following resources:
 ## Terraform Modules
 
 ## Notes
+This repository does not include the buildspec.yml required for AWS CodeBuild. Additionally, both the AWS CodePipeline Source and AWS CodeBuild project point to the same repository. For this project I chose to have my source files and buildspec.yml in the same repository. Feel free to change this in the provided modules. 
 
 ## Todo List
 - Lock down S3 Artifact Store bucket polcies
