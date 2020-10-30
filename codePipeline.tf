@@ -19,9 +19,9 @@ resource "aws_codepipeline" "testcodepipeline" {
       output_artifacts = ["source_output"]
 
       configuration = {
-        Repo       = "https://github.com/TheMedina/blog.masterthe.cloud.git"
-        Owner      = "Medina@skillcappedgames.com"
-        Branch     = "main"
+        Repo       = var.repository_name
+        Owner      = var.repository_owner
+        Branch     = var.repository_branch
         OAuthToken = var.github_token
       }
     }

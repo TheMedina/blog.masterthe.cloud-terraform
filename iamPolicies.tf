@@ -2,7 +2,7 @@
 
 #This is the IAM Policy that will be attatched to the IAM role for CodeBuild
 resource "aws_iam_role_policy" "test_codebuild_policy" {
-  role = aws_iam_role.codepipeline_role.name
+  role = aws_iam_role.test_codebuild.name
  
   policy = <<POLICY
 {
