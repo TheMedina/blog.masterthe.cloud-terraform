@@ -2,9 +2,9 @@
 The code in this repositiory should allow you to seamlessly integrate an AWS CodePipline workflow with an AWS CodeBuild project. 
 
 The goals of this project are as follows:
-- Deploy the neccessary infrastrcutre to create a AWS CI/CD pipeline
+- Deploy the neccessary infrastrcutre to create an AWS CI/CD pipeline
 - Deploy the infrastructure leveraging industry standard IaC (Terraform)
-- Have the infrascture configured leveraging best practices 
+- Have the infrascture configured leveraging best practices (Both AWS and Terraform)
 - Facilate an automatic AWS CodeBuild project when a commit is detected into a designated branch
 
 ## Architecture Diagram
@@ -25,3 +25,6 @@ This Terraform project will deploy the following resources:
 ## Notes
 
 ## Todo List
+- Lock down S3 Artifact Store bucket polcies
+- Add a CloudFront Distribution
+- Make buckets private and only allow signed URLs via CloudFront
