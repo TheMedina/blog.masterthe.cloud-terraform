@@ -1,4 +1,4 @@
-# AWS CodeBuild Implementation
+#AWS CodeBuild Implementation
 
 #CodeBuild Project #1
 resource "aws_codebuild_project" "test_codebuild" {

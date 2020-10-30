@@ -21,3 +21,8 @@ resource "aws_s3_bucket" "mtctestcodebuild" {
 EOF
   }
 }
+
+#This will be the S3 bucket that will function as our Artifact Store
+resource "aws_s3_bucket" "mtctestcodebuildartifacts" {
+  bucket = "mtctestcodebuildartifacts"
+}
