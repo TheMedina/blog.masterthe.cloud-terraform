@@ -1,4 +1,6 @@
-#IAM Roles for AWS CodeBuild and CodePipeline
+#IAM Roles for this deployment
+
+#AWS CodeBuild IAM role
 resource "aws_iam_role" "test_codebuild" {
   name = "test_codebuild"
 

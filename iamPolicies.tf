@@ -1,7 +1,9 @@
 #IAM Role Policies for AWS CodeBuild and CodePipeline
+
+#This is the IAM Policy that will be attatched to the IAM role for CodeBuild
 resource "aws_iam_role_policy" "test_codebuild_policy" {
   role = aws_iam_role.test_codebuild.name
-
+ 
   policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -36,8 +38,8 @@ resource "aws_iam_role_policy" "test_codebuild_policy" {
         "s3:*"
       ],
       "Resource": [
-        "${aws_s3_bucket.testcodebuild.arn}",
-        "${aws_s3_bucket.testcodebuild.arn}/*"
+        "${aws_s3_bucket.mtctestcodebuild.arn}",
+        "${aws_s3_bucket.mtctestcodebuild.arn}/*"
       ]
     }
   ]

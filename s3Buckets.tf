@@ -1,6 +1,8 @@
 #S3 Buckets for AWS CI/CD Pipeline
-resource "aws_s3_bucket" "testcodebuild" {
-  bucket = "s3-website-test.codebuild"
+
+#This is the s3 bucket that the site will eventucally live
+resource "aws_s3_bucket" "mtctestcodebuild" {
+  bucket = "mtctestcodebuild"
   acl    = "public-read"
 
   website {
