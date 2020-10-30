@@ -10,6 +10,8 @@ The goals of this project are as follows:
 ## Architecture Diagram
 [Insert Diagram Here] Coming Soon
 
+![AWS Pipeline](pipeline.png)
+
 ## Deployed Resources
 
 This Terraform project will deploy the following resources:
