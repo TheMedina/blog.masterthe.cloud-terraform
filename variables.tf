@@ -30,3 +30,8 @@ variable "static_web_bucket_name" {
 variable "artifacts_bucket_name" {
     description = "S3 Bucket for storing artifacts"
 }
+
+#ACM Wildcard Domains
+variable "acm_domain" {
+    description = "ACM domain name for wildcard cert"
+}
