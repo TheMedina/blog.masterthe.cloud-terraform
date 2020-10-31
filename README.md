@@ -10,7 +10,7 @@ The goals of this project are as follows:
 ## Architecture Diagram
 ![AWS Pipeline](pipeline.png)
 
-The architecture is a large high quality file. Click <a href = "https://raw.githubusercontent.com/TheMedina/blog.masterthe.cloud-terraform/main/pipeline.png" target ="_blank">here</a> to view it closer to native resolution and ease of use.
+The architecture is a large high quality file. Click <a href = "https://raw.githubusercontent.com/TheMedina/blog.masterthe.cloud-terraform/main/pipeline.png" target = "_blank">here</a> to view it closer to native resolution and ease of use.
 
 ## Deployed Resources
 
