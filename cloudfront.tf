@@ -31,7 +31,7 @@ resource "aws_cloudfront_distribution" "blogCDN" {
       }
     }
 
-    viewer_protocol_policy = "allow-all"
+    viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
@@ -98,6 +98,6 @@ resource "aws_cloudfront_distribution" "blogCDN" {
   viewer_certificate {
     acm_certificate_arn = aws_acm_certificate.blogMTCCert.arn
     ssl_support_method = "sni-only"
-    minimum_protocol_version = "TLSv1.1_2016"
+    minimum_protocol_version = "TLSv1.2_2019"
   }
 }

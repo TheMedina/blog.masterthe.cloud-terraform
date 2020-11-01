@@ -45,3 +45,8 @@ variable "acm_alias" {
 variable "origin_id" {
     description = "Origin ID"
 } 
+
+#Route53 Zone ID
+variable "zone_id" {
+    description = "Origin ID"
+} 
