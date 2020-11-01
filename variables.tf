@@ -35,3 +35,13 @@ variable "artifacts_bucket_name" {
 variable "acm_domain" {
     description = "ACM domain name for wildcard cert"
 }
+
+#ACM blog alias
+variable "acm_alias" {
+    description = "ACM Alias for blog site"
+} 
+
+#Origin ID
+variable "origin_id" {
+    description = "Origin ID"
+} 

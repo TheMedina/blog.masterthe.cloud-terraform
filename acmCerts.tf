@@ -2,7 +2,7 @@
 
 #Wildcard Cert for *.masterthe.cloud
 resource "aws_acm_certificate" "blogMTCCert" {
-  domain_name       = "*.masterthe.cloud"
+  domain_name       = var.acm_domain
   validation_method = "EMAIL"
 
   tags = {
