@@ -23,6 +23,13 @@ resource "aws_cloudfront_distribution" "blogCDN" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = var.origin_id
 
+    // lambda_function_association {
+    //   event_type    = "origin-request"
+    //   #lambda_arn    = "arn:aws:lambda:us-east-1:832646964096:function:indexRewrite:1"
+    //   lambda_arn    = "${aws_lambda_function.URI_Rewrite_Prod.arn}:1"
+    //   include_body  = false
+    // }
+
     forwarded_values {
       query_string = false
 
@@ -33,8 +40,9 @@ resource "aws_cloudfront_distribution" "blogCDN" {
 
     viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
-    default_ttl            = 3600
-    max_ttl                = 86400
+    default_ttl            = 0
+    max_ttl                = 0
+    compress               = true
   }
 
   # Cache behavior with precedence 0
@@ -54,8 +62,8 @@ resource "aws_cloudfront_distribution" "blogCDN" {
     }
 
     min_ttl                = 0
-    default_ttl            = 86400
-    max_ttl                = 31536000
+    default_ttl            = 0
+    max_ttl                = 0
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
   }
@@ -76,8 +84,8 @@ resource "aws_cloudfront_distribution" "blogCDN" {
     }
 
     min_ttl                = 0
-    default_ttl            = 3600
-    max_ttl                = 86400
+    default_ttl            = 0
+    max_ttl                = 0
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
   }

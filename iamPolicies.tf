@@ -81,3 +81,26 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
 }
 EOF
 }
+
+#Role policy for AWS Lambda
+// resource "aws_iam_role_policy" "lambda_edge" {
+//   name = "lamdba_edge"
+//   role = aws_iam_role.iam_for_lambdaEdge.id
+
+//   policy = <<EOF
+// {
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Effect":"Allow",
+//       "Action": [
+//         "lambda:GetFunction"
+//       ],
+//       "Resource": [
+//         "${aws_lambda_function.URI_Rewrite_Prod.arn}:*"
+//       ]
+//     }
+//   ]
+// }
+// EOF
+// }
