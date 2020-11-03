@@ -14,6 +14,8 @@ The architecture is a large high quality file. Click <a href = "https://raw.gith
 
 ## Deployed Resources
 
+OUT OF DATE. UPDATE COMING SOON
+
 This Terraform project will deploy the following resources:
 - An AWS CodeBuild Project x1
 - An AWS CodePipeline with two stages (Source and Build) x1
@@ -23,6 +25,8 @@ This Terraform project will deploy the following resources:
 - S3 Bucket Policies (One for each S3 bucket) x2
 
 ## Terraform Modules
+
+COMING SOON
 
 ## Notes
 This repository does not include the buildspec.yml required for AWS CodeBuild. Additionally, both the AWS CodePipeline Source and AWS CodeBuild project point to the same repository. For this project I chose to have my source files and buildspec.yml in the same repository. Feel free to change this in the provided modules. 
