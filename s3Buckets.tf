@@ -4,22 +4,6 @@
 resource "aws_s3_bucket" "mtctestcodebuild" {
   bucket = var.static_web_bucket_name
   acl    = "private"
-
-//   website {
-//     index_document = "index.html"
-//     error_document = "error.html"
-
-//     routing_rules = <<EOF
-// [{
-//     "Condition": {
-//         "KeyPrefixEquals": "docs/"
-//     },
-//     "Redirect": {
-//         "ReplaceKeyPrefixWith": "documents/"
-//     }
-// }]
-// EOF
-//   }
 }
 
 #This will be the S3 bucket that will function as our Artifact Store

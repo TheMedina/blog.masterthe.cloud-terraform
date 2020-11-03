@@ -23,12 +23,11 @@ resource "aws_cloudfront_distribution" "blogCDN" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = var.origin_id
 
-    // lambda_function_association {
-    //   event_type    = "origin-request"
-    //   #lambda_arn    = "arn:aws:lambda:us-east-1:832646964096:function:indexRewrite:1"
-    //   lambda_arn    = "${aws_lambda_function.URI_Rewrite_Prod.arn}:1"
-    //   include_body  = false
-    // }
+    lambda_function_association {
+      event_type    = "origin-request"
+      lambda_arn    = "${aws_lambda_function.URI_Rewrite_Prod.arn}:${aws_lambda_function.URI_Rewrite_Prod.version}"
+      include_body  = false
+    }
 
     forwarded_values {
       query_string = false

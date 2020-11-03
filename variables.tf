@@ -50,3 +50,13 @@ variable "origin_id" {
 variable "zone_id" {
     description = "Origin ID"
 } 
+
+#var.lambda_publish_new_version
+variable "lambda_publish_new_version"{
+    description = "Would lyou like to publish a new version of your Lambda@Edge Function. Select true for a first time deployment"
+}
+
+#Lambda Version
+// variable "lambda_version"{
+//     description = "Which version of the lambda@edge function would you like to use? If this is your first deployment select 2"
+// }
